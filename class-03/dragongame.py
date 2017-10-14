@@ -51,7 +51,7 @@ def check_cave(cave_chosen):
 
 play_again = "yes"
 while play_again == "yes":
-    # play game here 
+    # play game here
     display_intro()
     cave_number = choose_cave()
     # print("Player chose cave number {}".format(cave_number))

@@ -67,21 +67,3 @@ make_first_one(l)
 print(l)
 
 # lists are mutable types
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

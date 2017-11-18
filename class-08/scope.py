@@ -57,46 +57,13 @@ print(word)
 
 # strings are also immutable
 
+# if the data type is an immutable type this works differently.
 
+def make_first_one(lst):
+    lst[0] = 1
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-# if the data type is an immutable type.
-
-# def make_first_one(lst):
-#     lst[0] = 1
-#
-# l = [0, 1]
-# make_first_one(l)
-# print(l)
+l = [0, 1]
+make_first_one(l)
+print(l)
 
 # lists are mutable types
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

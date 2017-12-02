@@ -17,6 +17,9 @@ the game work:
         - requirements:
           The guess is valid if the letter has not been guessed before and is a letter
           of the alphabet, otherwise the guess is not valid. The guess has to be a single letter.
+          - valid_guess('a', ['b', 'a']) -> False
+          - valid_guess('b', ['a']) -> True
+          - valid_guess('4', ['a', 'b']) -> False
     - guess_progress(guess, word_progress, secret_word)
         - inputs:
           guess - the letter guessed by the player

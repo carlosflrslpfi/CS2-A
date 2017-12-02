@@ -44,8 +44,7 @@ Good luck!\n\n
     playing = True
     # main loop
     while (playing):
-        # secret_word = random.choice(words)
-        secret_word = "wow"
+        secret_word = random.choice(words)
         word_progress = ''.join(['_' for _ in range(len(secret_word))])
         wrong_guesses = 0
         guessed_letters = []

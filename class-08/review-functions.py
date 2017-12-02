@@ -51,7 +51,7 @@ def yell(words):
 
 loud = yell('hello') # function call -> evaluate the function -> output
 # function call: yell('hello'),
-# evaluate the function: words = 'hello', 'hello'.upper()
+# evaluate the function: words.txt = 'hello', 'hello'.upper()
 # output: "HELLO"
 print(loud)
 

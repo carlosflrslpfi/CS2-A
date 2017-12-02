@@ -1,0 +1,88 @@
+Word Guessing Game
+
+On this assignment you will be required to fill out two functions
+that will complete the word guessing game. I've provided the logic of the
+game. All you have to do is fill out the following two functions to make
+the game work:
+
+    - valid_guess(guess, guessed_letter)
+        - inputs:
+          guess - the letter guessed by the player
+          guessed_letters - a list of letters previously guessed by the player
+        - output:
+          This function returns a boolean, True if the guess is valid, and
+          False if the guess is not valid.
+          This function should also __print__ a message letting the player know if the
+          guess is valid or not.
+        - requirements:
+          The guess is valid if the letter has not been guessed before and is a letter
+          of the alphabet, otherwise the guess is not valid. The guess has to be a single letter.
+    - guess_progress(guess, word_progress, secret_word)
+        - inputs:
+          guess - the letter guessed by the player
+          word_progress - the current word progress (including previous correct guesses)
+          secret_word - the randomly selected secret word
+        - output:
+          This function returns a string that represent the word progress
+        - requirements:
+          Here are a couple examples:
+          - guess_progress('p', 'a___e', 'apple') -> 'app_e'
+          - guess_progress('o', 'w_w', 'wow') -> 'wow'
+          - guess_progress('e', '_ll_n', 'allen') -> '_llen'
+
+This is what a typical game play will look like:
+
+Starting game!
+
+The rules of the game are:
+
+    1. The computer chooses a random word
+    2. You will try to guess the letters in the word one by one
+    3. You are allowed to miss 6 times, after that you lose the game
+    4. You win by guessing all letters correctly
+
+Good luck!
+
+How long would you like the word to be? 3
+Progress: _ _ _ , Guessed letters: [] Incorrect Guesses left: 6
+Guess a letter: a
+Sorry the letter is not in the word.
+Progress: _ _ _ , Guessed letters: ['a'] Incorrect Guesses left: 5
+Guess a letter: w
+Progress: w _ w , Guessed letters: ['a', 'w'] Incorrect Guesses left: 5
+Guess a letter: o
+Congratulations you won! The word was: wow
+Would you like to play again?
+
+
+Another iteration of the game play:
+
+How long would you like the word to be? 3
+Progress: _ _ _ , Guessed letters: [] Incorrect Guesses left: 6
+Guess a letter: a
+Sorry the letter is not in the word.
+Progress: _ _ _ , Guessed letters: ['a'] Incorrect Guesses left: 5
+Guess a letter: b
+Sorry the letter is not in the word.
+Progress: _ _ _ , Guessed letters: ['a', 'b'] Incorrect Guesses left: 4
+Guess a letter: c
+Sorry the letter is not in the word.
+Progress: _ _ _ , Guessed letters: ['a', 'b', 'c'] Incorrect Guesses left: 3
+Guess a letter: d
+Sorry the letter is not in the word.
+Progress: _ _ _ , Guessed letters: ['a', 'b', 'c', 'd'] Incorrect Guesses left: 2
+Guess a letter: o
+Progress: _ o _ , Guessed letters: ['a', 'b', 'c', 'd', 'o'] Incorrect Guesses left: 2
+Guess a letter: e
+Sorry the letter is not in the word.
+Progress: _ o _ , Guessed letters: ['a', 'b', 'c', 'd', 'o', 'e'] Incorrect Guesses left: 1
+Guess a letter: a
+You already guessed this letter
+Progress: _ o _ , Guessed letters: ['a', 'b', 'c', 'd', 'o', 'e'] Incorrect Guesses left: 1
+Guess a letter: 5
+You must guess a letter from the alphabet abcdefghijklmnopqrstuvwxyz
+Progress: _ o _ , Guessed letters: ['a', 'b', 'c', 'd', 'o', 'e'] Incorrect Guesses left: 1
+Guess a letter: m
+Sorry the letter is not in the word.
+Sorry you lost, the secret word was: wow
+Would you like to play again?

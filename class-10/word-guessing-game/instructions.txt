@@ -32,6 +32,7 @@ the game work:
           - guess_progress('p', 'a___e', 'apple') -> 'app_e'
           - guess_progress('o', 'w_w', 'wow') -> 'wow'
           - guess_progress('e', '_ll_n', 'allen') -> '_llen'
+          - guess_progress('x', '_ll_n', 'allen') -> '_ll_n'
 
 This is what a typical game play will look like:
 

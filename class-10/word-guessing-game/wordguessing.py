@@ -14,12 +14,14 @@ def import_words(n):
     return words
 
 def valid_guess(letter, guessed_letters):
-    # YOUR CODE GOES HERE
     return True
 
 def guess_progress(letter, secret_word, word_progress):
     # YOUR CODE GOES HERE
-    return ""
+    progress = ""
+    # loop through secret word, look at every letter:
+    # make a decision of what to add to the progress variable.
+    return progress
 
 def progress_format(word):
     formatted_word = ""
@@ -44,7 +46,8 @@ Good luck!\n\n
     playing = True
     # main loop
     while (playing):
-        secret_word = random.choice(words)
+        # secret_word = random.choice(words)
+        secret_word = "wow"
         word_progress = ''.join(['_' for _ in range(len(secret_word))])
         wrong_guesses = 0
         guessed_letters = []
@@ -71,7 +74,16 @@ Good luck!\n\n
             print("Okay, goodbye!")
 
 
-
-
 if __name__ == "__main__":
-    main()
+    # main()
+
+    # valid_guess
+    print(valid_guess('a', ['b', 'a']))
+    print(valid_guess('a', ['b', 'c']))
+    print(valid_guess('1', ['b', 'c']))
+
+    # guess_progress
+    print(guess_progress('p', 'a___e', 'apple')) # -> 'app_e'
+    print(guess_progress('o', 'w_w', 'wow')) # -> 'wow'
+    print(guess_progress('e', '_ll_n', 'allen')) # -> '_llen'
+    print(guess_progress('x', '_ll_n', 'allen')) # -> '_ll_n'

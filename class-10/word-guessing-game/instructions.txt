@@ -1,5 +1,7 @@
 Word Guessing Game
 
+Copy the starter code and the words.txt file.
+
 On this assignment you will be required to fill out two functions
 that will complete the word guessing game. I've provided the logic of the
 game. All you have to do is fill out the following two functions to make

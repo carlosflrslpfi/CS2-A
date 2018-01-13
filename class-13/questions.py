@@ -1,9 +1,9 @@
 # Question 1: Write a function that takes in a list of names
 # and returns a dictionary with each name as a key, and the length
 # of the name as the value
-def names_to_list(names):
+def names_to_dict(names):
     """
-    >>> names_to_list(['Jim', 'Jade', 'Maya'])
+    >>> names_to_dict(['Jim', 'Jade', 'Maya'])
     {'Jim': 3, 'Jade': 4, 'Maya': 4}
     """
     # Write your code here

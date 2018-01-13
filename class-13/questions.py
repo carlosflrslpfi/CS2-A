@@ -3,24 +3,43 @@
 # of the name as the value
 def names_to_dict(names):
     """
-    >>> names_to_dict(['Jim', 'Jade', 'Maya'])
+    names_to_dict(['Jim', 'Jade', 'Maya'])
     {'Jim': 3, 'Jade': 4, 'Maya': 4}
     """
     # Write your code here
-    return
+    d = {}
+    for name in names:
+        d[name] = len(name)
+    return d
+print("Question 1:")
+print(names_to_dict(['Jim', 'Jade', 'Maya']))
+print()
 
 # Question 2: Write a function that takes in a list of words and a
 # dictionary. Replace every occurrence of a key in the list
 # with the keys corresponding value, and return the modified list
-def replace_words(characters, dictionary):
+def replace_words(words, dictionary):
     """
-    >>> words = ['hello', 'im', 'very', 'happy']
-    >>> d = {'hello': 'hey', 'happy': 'neutral' }
-    >>> replace_words(words, d)
+    words = ['hello', 'im', 'very', 'happy']
+    d = {'hello': 'hey', 'happy': 'neutral' }
+    replace_words(words, d)
     [hey, im, very, neutral]
     """
-    # Write your code here
-    return
+    new_list = []
+    for word in words:
+        if word in dictionary:
+            new_list.append(dictionary[word])
+        else:
+            new_list.append(word)
+    return new_list
+# 1st iteration: word = 'hello', new_list = ['hey']
+# 2nd iteration: word = 'im', new_list = ['hey', 'im']
+# ...
+# end
+words = ['hello', 'im', 'very', 'happy']
+d = {'hello': 'hey', 'happy': 'neutral' }
+print(words)
+print(replace_words(words, d))
 
 # Question 3: Write a function that prints a list of words, then using
 # the function from Question 2 change a couple words and print the

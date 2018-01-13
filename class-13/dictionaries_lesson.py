@@ -84,11 +84,15 @@ print()
 # you can also check if a __key__ is in a dictionary
 print(2 in d)
 print(10 in d)
-
+print()
 # I want to know if the word 'even' is in dictionary d as a __value__
 print('even' in d) # false because 'in' only looks at keys
 print('even' in d.values())
+print()
+print((2, 'even') in d.items()) # True
+print((2, 'odd') in d.items())  # False
 
+print(2 in d.keys() and d[2] == 'even')
 # mod operation, modular arithmetic
 # k % 2, divide k by 2, and return the remainder.
 # if there's no remainder that means that k is divisible by 2

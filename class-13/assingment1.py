@@ -60,5 +60,12 @@ print(replace_words(words, d))
 # 'You like tea'
 def q3():
     # Write your code here
-    pass
+    s = "hello i like coffee"
+    s_list = s.split(" ")
+    d = {'coffee': 'juice', 'like': 'dislike'}
+    new_list = replace_words(s_list, d)
+    print(s)
+    print(' '.join(new_list))
+
+q3()
 

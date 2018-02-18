@@ -39,8 +39,17 @@ def create_counts_dictionary():
     return d
 print(create_counts_dictionary())
 
-# Q4: Write a function that returns a list of the top 10 used words.
+# Q4: Write a function that returns a list of the top n used words.
 # Hint 1: to sort a dictionary use:
 #   sorted_d = sorted(d.items(), key=lambda x: x[1], reverse=True)
 # where 'd' is the dictionary.
 # Hint 2: Use the previous function.
+def top_n_words(n):
+    d = create_counts_dictionary()
+    sorted_d = sorted(d.items(), key=lambda x: x[1], reverse=True)
+    return sorted_d[:n]
+
+print(top_n_words(10)[0])
+# evaluate top_n_words(10) -> list[0]
+top_n = top_n_words(10)
+print(top_n[0])
